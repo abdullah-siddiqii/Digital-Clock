@@ -1,4 +1,3 @@
-// src/components/ClockDisplay.tsx
 'use client';
 import { FC, useState, useEffect } from 'react';
 import DigitDisplay from './DigitDisplay';

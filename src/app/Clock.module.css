@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 0.25vw;
+  gap: 0.1vw;
   padding: 0.5vw;
 }
 .clockPage {
