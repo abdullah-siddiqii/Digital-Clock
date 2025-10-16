@@ -31,6 +31,7 @@ const DigitDisplay: FC<Props> = ({ digit }) => {
   }
 
   const map = DIGIT_MAP[digit];
+ 
 
   if (!map) {
     console.warn(`⚠️ Unknown digit "${digit}" passed to DigitDisplay.`);

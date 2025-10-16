@@ -30,6 +30,7 @@ const ClockDisplay: FC = () => {
   const [mounted, setMounted] = useState(false);
   const [digits, setDigits] = useState<string[]>([]);
   const [showColon, setShowColon] = useState(true);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -38,12 +39,20 @@ const ClockDisplay: FC = () => {
       setDigits(getClockDigits());
       setShowColon(prev => !prev);
     }, 1000);
+    setLoaded(true);
 
     return () => clearInterval(interval);
   }, []);
 
   if (!mounted) {
     return null;
+  }
+  if(loaded && digits.length === 0) {
+    return (
+     <div className="h-[calc(100vh-80px)] w-full flex items-center  justify-center bg-black">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-yellow-400"></div>
+      </div>
+    );
   }
 
   const [h1, h2, m1, m2, s1, s2, AmPm] = digits;

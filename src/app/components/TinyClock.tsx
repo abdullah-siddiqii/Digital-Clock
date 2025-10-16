@@ -16,6 +16,7 @@ const TinyClock: FC<HandAngles> = ({ h1, h2 }) => {
         className={styles.hand} 
         style={{ '--angle': `${h2}deg` } as React.CSSProperties}
       ></div>
+      
     </div>
   );
 };
