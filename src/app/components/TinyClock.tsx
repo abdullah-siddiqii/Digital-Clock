@@ -4,9 +4,8 @@ import { FC } from 'react';
 import { HandAngles } from '../types';
 import styles from '../Clock.module.css';
 
-interface TinyClockProps extends HandAngles {}
-
-const TinyClock: FC<TinyClockProps> = ({ h1, h2 }) => {
+// ✅ Use HandAngles directly, no need for an empty interface
+const TinyClock: FC<HandAngles> = ({ h1, h2 }) => {
   return (
     <div className={styles.tinyClock}>
       {/* Hand 1 */}
@@ -14,6 +13,7 @@ const TinyClock: FC<TinyClockProps> = ({ h1, h2 }) => {
         className={styles.hand} 
         style={{ '--angle': `${h1}deg` } as React.CSSProperties}
       ></div>
+      
       {/* Hand 2 */}
       <div 
         className={styles.hand} 
