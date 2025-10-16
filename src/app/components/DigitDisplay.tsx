@@ -9,7 +9,6 @@ interface Props {
 }
 
 const DigitDisplay: FC<Props> = ({ digit }) => {
-  // Special handling for colon
   if (digit === ':') {
     return (
       <div className={styles.colon}>
@@ -19,9 +18,20 @@ const DigitDisplay: FC<Props> = ({ digit }) => {
     );
   }
 
+  if (digit === 'AM' || digit === 'PM') {
+    return (
+      <div className={styles.ampm}>
+        {digit.split('').map((char, i) => (
+          <span key={i} className={styles.ampmChar}>
+            {char}
+          </span>
+        ))}
+      </div>
+    );
+  }
+
   const map = DIGIT_MAP[digit];
 
-  // 🚨 Defensive check — prevents crash if map undefined
   if (!map) {
     console.warn(`⚠️ Unknown digit "${digit}" passed to DigitDisplay.`);
     return <div className={styles.digitContainer}></div>;

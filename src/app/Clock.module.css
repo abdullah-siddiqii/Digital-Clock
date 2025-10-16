@@ -1,4 +1,3 @@
-/* === CLOCK CONTAINER === */
 .clockContainer {
   display: flex;
   gap: 2vw;
@@ -9,8 +8,14 @@
   padding: 4vh;
   flex-wrap: wrap;
 }
-
-/* === DIGIT GRID === */
+.ampm {
+  font-size: 1.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ffdd57;
+  text-align: center;
+  margin-top: 1vh;
+}
 .digitContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -18,7 +23,6 @@
   gap: 0.25vw;
   padding: 0.5vw;
 }
-/* === PAGE WRAPPER === */
 .clockPage {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,6 @@
   overflow: hidden;
 }
 
-/* === BEAUTIFUL GLOWING TITLE === */
 .clockTitle {
   font-size: 3vw;
   font-family: 'Orbitron', sans-serif;
@@ -53,7 +56,6 @@
  
 }
 
-/* === MINI CLOCK === */
 .tinyClock {
   position: relative;
   width: 2.5vw;
@@ -64,7 +66,6 @@
   box-shadow: inset 0 0 8px rgba(255, 215, 0, 0.15);
 }
 
-/* === CLOCK HANDS === */
 .hand {
   --angle: 0deg;
   position: absolute;
@@ -90,7 +91,6 @@
   }
 }
 
-/* === COLON (:) === */
 .colonWrapper {
   display: flex;
   align-items: center;
@@ -127,8 +127,6 @@
     opacity: 1;
   }
 }
-
-/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .tinyClock {
     width: 5vw;
