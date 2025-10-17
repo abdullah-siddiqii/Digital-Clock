@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
+.themelight {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -19,8 +31,24 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+@media (prefers-color-scheme: neon) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #00ffea;
+  }
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }

@@ -1,36 +1,119 @@
+/* ==========================
+   CLOCK THEMES
+   ========================== */
+
+/* Default: Dark Theme */
+
+:root {
+  --clock-bg: radial-gradient(circle at center, #111111 80%, #000000 100%);
+  --hand-color: #ffd700;
+  --hand-glow1: #ffcc00;
+  --hand-glow2: #fff07a;
+  --dot-color: #ffd700;
+  --dot-glow1: #ffd700;
+  --dot-glow2: #fff07a;
+  --theme-title:#ffd700;
+  --full-bg: #000000;
+  --theme-button-bg: #222222;
+  --theme-button-active: #29281f;
+}
+/* Light Theme */
+.themelight{
+  --clock-bg: radial-gradient(circle at center, #f0f0f0 80%, #dcdcdc 100%);
+  --hand-color: #333;
+  --hand-glow1: #666;
+  --hand-glow2: #999;
+  --dot-color: #333;
+  --dot-glow1: #666;
+  --dot-glow2: #999;
+  --theme-title: #333;
+  --full-bg: #ffffff;
+  --theme-button-bg: #e0e0e0; 
+  --theme-button-active: #c0c0c0;
+}
+/* Neon Theme */
+
+.themeneon {
+  --clock-bg: radial-gradient(circle at center, #0f0f1f 80%, #00001a 100%);
+  --hand-color: #00ffea;
+  --hand-glow1: #00fff0;
+  --hand-glow2: #00d0ff;
+  --dot-color: #00ffea;
+  --dot-glow1: #00fff0;
+  --dot-glow2: #00d0ff;
+  --theme-title: #00ffea;
+  --full-bg: #00001a;
+  --theme-button-bg: #001a1a;
+  --theme-button-active: #189090;
+}
+.themepaper{
+  --clock-bg: radial-gradient(circle at center, #f5f5dc 30%, #e0e0b0 90%);
+  --hand-color: #8b4513;
+  --hand-glow1: #a0522d;
+  --hand-glow2: #d2691e;
+  --dot-color: #8b4513;
+  --dot-glow1: #a0522d;
+  --dot-glow2: #d2691e;
+  --theme-title: #8b4513;
+  --full-bg: #fff8dc;
+  --theme-button-bg: #deb887;
+  --theme-button-active: #cf7c29;
+}
+.themeold{
+  --clock-bg: radial-gradient(circle at center, #2f4f4f 4%, #082626 100%);
+  --hand-color: #d2b48c;
+  --hand-glow1: #deb887;
+  --hand-glow2: #f4a460;
+  --dot-color: #d2b48c;
+  --dot-glow1: #deb887;
+  --dot-glow2: #f4a460;
+  --theme-title: #2f4f4f;
+  --full-bg: #073030;
+  --theme-button-bg: #486868;
+  --theme-button-active: #0b5757;
+}
+.themerich{
+  --clock-bg: radial-gradient(circle at center, #3b2f2f 10%, #200001 90%);
+  --hand-color: #ffd700;
+  --hand-glow1: #ffcc00;
+  --hand-glow2: #fff07a;
+  --dot-color: #ffd700;
+  --dot-glow1: #ffd700;
+  --dot-glow2: #fff07a;
+  --theme-title:#ffd700;
+  --full-bg: #1a0a0a;
+  --theme-button-bg: #4b2e2e;
+  --theme-button-active: #893838;
+}
+
+/* ==========================
+CLOCK PAGE & CONTAINER
+   ========================== */
+
+   .themeTitle{
+     color:var(--theme-title);
+   }
+.clockPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  background: var(--full-bg);
+  width: 100%;
+}
+
 .clockContainer {
   display: flex;
   gap: 2vw;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #000000 10%, #101010 0%);
-  min-height: 80vh;
-  padding: 4vh;
+  min-height: 40vh;
+  /* padding: 4vh; */
   flex-wrap: wrap;
-}
-.ampm {
-  font-size: 2.5vw;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  color: #ffdd57;
-  text-align: center;
-  margin-top: 1vh;
-}
-.digitContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 0.1vw;
-  padding: 0.5vw;
-}
-.clockPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: radial-gradient(circle at center, #000 20%, #0a0a0a 100%);
-  color: white;
+  background: var(--clock-bg);
   overflow: hidden;
 }
 
@@ -39,10 +122,10 @@
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   letter-spacing: 0.2vw;
-  color: #ffd700;
+  color: var(--hand-color);
   text-align: center;
-  margin-bottom: 3vh;
- 
+  margin-bottom: 1vh;
+  margin-top: 4rem;
 }
 
 .clockbottom {
@@ -50,22 +133,47 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   letter-spacing: 0.1vw;
-  color: #ffdd57;
+  color: var(--hand-color);
   text-align: center;
   margin-top: 3vh;
- 
 }
+
+.ampm {
+  font-size: 2.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--hand-color);
+  text-align: center;
+  margin-top: 1vh;
+}
+
+/* ==========================
+   DIGIT GRID
+   ========================== */
+
+.digitContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0.1vw;
+  padding: 0.5vw;
+}
+
+/* ==========================
+   TINY CLOCK
+   ========================== */
 
 .tinyClock {
   position: relative;
   width: 2.5vw;
   height: 2.5vw;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #111111 80%, #000000 100%);
+  background: var(--clock-bg);
   overflow: hidden;
   box-shadow: inset 0 0 8px rgba(255, 215, 0, 0.15);
 }
 
+/* Hands */
 .hand {
   --angle: 0deg;
   position: absolute;
@@ -73,23 +181,33 @@
   left: 50%;
   width: 45%;
   height: 0.25vw;
-  background-color: #ffd700;
+  background-color: var(--hand-color);
   transform-origin: 0% 50%;
   transform: rotate(var(--angle));
   border-radius: 50%;
-  /* box-shadow: 0 0 5px #ffd700, 0 0 10px #ffea00; */
   transition: transform 0.4s ease, opacity 0.3s ease;
   animation: glowPulse 3s ease-in-out infinite;
 }
 
+/* Light hands for 'N' symbol */
+.hand.light {
+  background-color: rgba(255, 215, 0, 0.3); /* dim/faded for N */
+  box-shadow: 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+/* Hand Glow Animation */
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 6px #ffcc00, 0 0 1px #ffd700;
+    box-shadow: 0 0 6px var(--hand-glow1), 0 0 1px var(--hand-glow2);
   }
   50% {
-    box-shadow: 0 0 8px #fff07a, 0 0 15px rgba(255, 255, 150, 0.5);
+    box-shadow: 0 0 8px var(--hand-glow2), 0 0 15px rgba(255, 255, 255, 0.5);
   }
 }
+
+/* ==========================
+   COLON
+   ========================== */
 
 .colonWrapper {
   display: flex;
@@ -108,35 +226,76 @@
   height: 4vw;
 }
 
+/* Dots */
 .dot {
   width: 0.7vw;
   height: 0.7vw;
-  background-color: #ffd700;
+  background-color: var(--dot-color);
   border-radius: 50%;
-  box-shadow: 0 0 8px #ffd700, 0 0 16px #fff07a;
+  box-shadow: 0 0 8px var(--dot-glow1), 0 0 16px var(--dot-glow2);
   animation: pulse 1.5s infinite alternate;
 }
 
 @keyframes pulse {
-  from {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  to {
-    transform: scale(1.3);
-    opacity: 1;
-  }
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.3); opacity: 1; }
 }
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
+@media (max-width: 1200px) {
+  .clockTitle { font-size: 4vw; }
+  .ampm { font-size: 3vw; }
+  .clockbottom { font-size: 1.2vw; }
+  .tinyClock { width: 3.5vw; height: 3.5vw; }
+  .digitContainer { gap: 0.3vw; }
+  .dot { width: 1vw; height: 1vw; }
+  .hand { height: 0.3vw; }
+}
+
 @media (max-width: 768px) {
-  .tinyClock {
-    width: 5vw;
-    height: 5vw;
-  }
-  .digitContainer {
-    gap: 0.5vw;
-  }
-  .dot {
-    width: 1.5vw;
-    height: 1.5vw;
-  }
+  .clockTitle { font-size: 6vw; }
+  .ampm { font-size: 4vw; }
+  .clockbottom { font-size: 1.5vw; }
+  .tinyClock { width: 5vw; height: 5vw; }
+  .digitContainer { gap: 0.5vw; }
+  .dot { width: 1.5vw; height: 1.5vw; }
+  .hand { height: 0.4vw; }
+}
+
+@media (max-width: 480px) {
+  .clockTitle { font-size: 8vw; }
+  .ampm { font-size: 5vw; }
+  .clockbottom { font-size: 2vw; }
+  .tinyClock { width: 8vw; height: 8vw; }
+  .digitContainer { gap: 1vw; }
+  .dot { width: 2vw; height: 2vw; }
+  .hand { height: 0.6vw; }
+}
+.themeButton {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--theme-button-bg);
+  color: var(--background);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+} 
+.themeButton:active {
+  transform: scale(0.95);
+  color: var(--theme-button-active);
+}
+.themeButton:hover {
+  transform: scale(1.2);
+}
+
+.activeButton {
+  transform: scale(1.3);
+  opacity: 1;
+  background-color: var(--theme-button-active);
 }
