@@ -8,17 +8,8 @@
 }
 
 :root {
-  --clock-bg: radial-gradient(circle at center, #111111 80%, #000000 100%);
-  --hand-color: #ffd700;
-  --hand-glow1: #ffcc00;
-  --hand-glow2: #fff07a;
-  --dot-color: #ffd700;
-  --dot-glow1: #ffd700;
-  --dot-glow2: #fff07a;
-  --theme-title:#ffd700;
-  --full-bg: #000000;
-  --theme-button-bg: #222222;
-  --theme-button-active: #29281f;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 .themelight {
   --background: #ffffff;
