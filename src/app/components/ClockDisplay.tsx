@@ -18,6 +18,7 @@ const getClockDigits = (): string[] => {
   return [...hh, ...mm, ...ss, amPm];
 };
 
+
 // Separate Colon component for blinking effect
 const Colon: FC<{ show: boolean }> = ({ show }) => (
   <div style={{ opacity: show ? 1 : 0.3, transition: 'opacity 0.4s ease' }}>
