@@ -19,7 +19,7 @@
 }
 /* Light Theme */
 .themelight{
-  --clock-bg: radial-gradient(circle at center, #f0f0f0 80%, #dcdcdc 100%);
+  --clock-bg: radial-gradient(circle at center, #f0f0f0 40%, #dcdcdc 70%);
   --hand-color: #333;
   --hand-glow1: #666;
   --hand-glow2: #999;
@@ -287,7 +287,7 @@ CLOCK PAGE & CONTAINER
   transition: background-color 0.3s, transform 0.2s;
 } 
 .themeButton:active {
-  transform: scale(0.95);
+  transform: scale(1);
   color: var(--theme-button-active);
 }
 .themeButton:hover {
